@@ -1,0 +1,8 @@
+{
+  "name": "AI 实践助手",
+  "description": "一个专注于科技、DIY和科创的短视频平台，配备AI老师傅辅助用户进行项目实践和创意探究。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

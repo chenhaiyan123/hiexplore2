@@ -1,0 +1,110 @@
+/* 
+   HiExplore 全局统一视觉样式表 (Global Theme)
+   请将此文件引入到 www.hiexplore.com 的 <head> 中，以实现与 App 的视觉统一。
+   <link rel="stylesheet" href="/path/to/hiexplore-global.css">
+*/
+
+:root {
+  --hi-bg-black: #000000;
+  --hi-bg-dark: #111827; /* gray-900 */
+  --hi-text-white: #ffffff;
+  --hi-text-gray: #9ca3af; /* gray-400 */
+  --hi-accent-blue: #2563eb; /* blue-600 */
+  --hi-accent-purple: #9333ea; /* purple-600 */
+  --hi-accent-amber: #d97706; /* amber-600 */
+}
+
+body {
+  background-color: var(--hi-bg-black);
+  color: var(--hi-text-white);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 统一的导航栏样式 */
+.hi-navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.hi-logo {
+  font-weight: 900;
+  font-size: 1.5rem;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-decoration: none;
+}
+
+/* 统一的卡片样式 */
+.hi-card {
+  background-color: var(--hi-bg-dark);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 0.75rem; /* 12px */
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.hi-card:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
+}
+
+/* 统一的按钮样式 */
+.hi-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s;
+  text-decoration: none;
+}
+
+.hi-btn-primary {
+  background-color: var(--hi-accent-blue);
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.hi-btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: scale(0.98);
+}
+
+/* 进入 AI 实验室的引导按钮 */
+.hi-lab-entry {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background: linear-gradient(135deg, var(--hi-accent-blue), var(--hi-accent-purple));
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+  z-index: 100;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  animation: hi-float 3s ease-in-out infinite;
+}
+
+@keyframes hi-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

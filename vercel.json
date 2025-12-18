@@ -1,0 +1,21 @@
+
+{
+  "rewrites": [
+    {
+      "source": "/qwen-api/(.*)",
+      "destination": "https://dashscope.aliyuncs.com/compatible-mode/v1/$1"
+    },
+    {
+      "source": "/deepseek-api/(.*)",
+      "destination": "https://api.deepseek.com/$1"
+    },
+    {
+      "source": "/google-api/(.*)",
+      "destination": "https://generativelanguage.googleapis.com/$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
